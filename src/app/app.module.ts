@@ -8,7 +8,7 @@ import { NavesespacialesComponent} from './navesespaciales/navesespaciales.compo
 import { VehiculosComponent} from './vehiculos/vehiculos.component';
 import { EspeciesComponent} from './especies/especies.component';
 import { PlanetasComponent} from './planetas/planetas.component';
-// import { PersonajesModule} from './personajes/personajes.module';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { PlanetasComponent} from './planetas/planetas.component';
   ],
   imports: [
     BrowserModule
-    //PersonajesModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
