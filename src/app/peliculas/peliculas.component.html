@@ -4,12 +4,9 @@
         <td  valign="top">
       <div class="form-group" >
     <label for="selectpelicula">Seleccionar Peliculas</label>
-    <select class="form-control" id="pelicula" >
-      <option>Pelicula 1</option>
-      <option>Pelicula 2</option>
-      <option>Pelicula 3</option>
-      <option>Pelicula 4</option>
-      <option>Pelicula 5</option>
+    <select class="form-control" id="pelicula" [(ngModel)]="titulo" (change)="seleccionalo(titulo)" >
+      <option *ngFor='let pelicula of peliculas'>{{pelicula.title}}</option>
+      
     </select>
 </div>
 </td>
@@ -19,42 +16,42 @@
           <label for="titulo" class="col-lg-10 control-label">Titulo</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="titulo"
-                   placeholder="Titulo">
+                   placeholder={{titulo}}>
           </div>
         </div>
         <div class="form-group">
           <label for="episodio" class="col-lg-10 control-label">Episodio</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="episodio"
-                   placeholder="Episodio">
+                   placeholder={{episodio}}>
           </div>
         </div>
         <div class="form-group">
             <label for="openningcrawl" class="col-lg-10 control-label">Openning Crawl</label>
             <div class="col-lg-13">
-              <input type="text" class="form-control" id="openningcrawl"
-                     placeholder="Opennin Crawl">
+              <textarea rows="4" cols="35"  placeholder={{resumen}} id="resumen"></textarea>
+              
             </div>
         </div>
         <div class="form-group">
             <label for="director" class="col-lg-10 control-label">Director</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="director"
-                     placeholder="Director">
+                     placeholder={{director}}>
             </div>
         </div>
         <div class="form-group">
             <label for="productor" class="col-lg-10 control-label">Productor</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="productor"
-                     placeholder="Productor">
+                     placeholder={{productor}}>
             </div>
         </div>
         <div class="form-group">
             <label for="fechalanzamiento" class="col-lg-10 control-label">Fecha de Lanzamiento</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="fechalanzamiento"
-                     placeholder="Fecha de lanzamiento">
+                     placeholder={{rfecha}}>
             </div>
         </div>
         
@@ -67,36 +64,20 @@
         <div class="form-group">
           <label for="personajes" class="col-lg-10 control-label">Personajes</label>
           <div class="col-lg-13">
-            <input type="text" class="form-control" id="personajes"
-                   placeholder="Personajes">
+            <textarea rows="4" cols="35"  placeholder={{personaje}} id="personajes"></textarea>
+           
           </div>
         </div>
         <div class="form-group">
           <label for="navesespaciales" class="col-lg-10 control-label">Naves Espaciales</label>
           <div class="col-lg-13">
-            <input type="text" class="form-control" id="navesespaciales"
-                   placeholder="Naves Espaciales">
+            <textarea rows="4" cols="35"  placeholder={{nave}} id="naves"></textarea>
           </div>
-        </div>
-        <div class="form-group">
-            <label for="vehiculo" class="col-lg-10 control-label">Vehiculos</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="vehiculos"
-                     placeholder="Vehiculos">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="especies" class="col-lg-10 control-label">Especies</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="especies"
-                     placeholder="Especies">
-            </div>
         </div>
         <div class="form-group">
             <label for="planetas" class="col-lg-10 control-label">Planetas</label>
             <div class="col-lg-13">
-              <input type="text" class="form-control" id="planetas"
-                     placeholder="Planetas">
+              <textarea rows="4" cols="35"  placeholder={{planeta}} id="naves"></textarea>
             </div>
         </div>
         
