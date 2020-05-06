@@ -1,0 +1,81 @@
+<table  width=800px align="center" cellspacing="10" cellpadding="10" >
+    <tr>
+        <td  valign="top">
+      <div class="form-group" >
+    <label for="selectespecie">Seleccionar Especie</label>
+    <select class="form-control" id="selectespecie" [(ngModel)]="nombre" (change)="seleccionaEspecie(nombre)">
+      <option *ngFor='let especie of especies'>{{especie.name}}</option>
+    </select>
+</div>
+</td>
+<td>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="nombre" class="col-lg-10 control-label">Nombre</label>
+          <div class="col-lg-13">
+            <input type="text" class="form-control" id="nombre"
+                   placeholder={{nombre}}>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="clasificacion" class="col-lg-10 control-label">Clasificacion</label>
+          <div class="col-lg-13">
+            <input type="text" class="form-control" id="clasificacion"
+                   placeholder={{clasificacion}}>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="designacion" class="col-lg-10 control-label">Designacion</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="designacion"
+                     placeholder={{designacion}}>
+            </div>
+          </div>
+        <div class="form-group">
+            <label for="promedioestatura" class="col-lg-10 control-label">Promedio Estatura</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="promedioestatura"
+                     placeholder={{estatura}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="colorpiel" class="col-lg-10 control-label">Color de Piel</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="colorpiel"
+                     placeholder={{piel}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="colorcabello" class="col-lg-10 control-label">Color de Cabello</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="colorcabello"
+                     placeholder={{cabello}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="colorojos" class="col-lg-10 control-label">Color de Ojos</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="colorojos"
+                     placeholder={{ojos}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="promediovida" class="col-lg-10 control-label">Promedio de Vida</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="promediovida"
+                     placeholder={{pvida}}>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="idiomas" class="col-lg-10 control-label">Idiomas</label>
+            <div class="col-lg-13">
+              <input type="text" class="form-control" id="idiomas"
+                     placeholder={{idioma}}>
+            </div>
+        </div>
+      </form>
+    
+</td>
+</tr>
+</table>
+
