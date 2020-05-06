@@ -3,12 +3,8 @@
         <td  valign="top">
       <div class="form-group" >
     <label for="selectespecie">Seleccionar Especie</label>
-    <select class="form-control" id="selectespecie" >
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="form-control" id="selectespecie" [(ngModel)]="nombre" (change)="seleccionaEspecie(nombre)">
+      <option *ngFor='let especie of especies'>{{especie.name}}</option>
     </select>
 </div>
 </td>
@@ -18,85 +14,63 @@
           <label for="nombre" class="col-lg-10 control-label">Nombre</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="nombre"
-                   placeholder="Nombre">
+                   placeholder={{nombre}}>
           </div>
         </div>
         <div class="form-group">
           <label for="clasificacion" class="col-lg-10 control-label">Clasificacion</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="clasificacion"
-                   placeholder="Clasificacion">
+                   placeholder={{clasificacion}}>
           </div>
         </div>
         <div class="form-group">
             <label for="designacion" class="col-lg-10 control-label">Designacion</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="designacion"
-                     placeholder="Designacion">
+                     placeholder={{designacion}}>
             </div>
           </div>
         <div class="form-group">
             <label for="promedioestatura" class="col-lg-10 control-label">Promedio Estatura</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="promedioestatura"
-                     placeholder="Promedio Estatura">
+                     placeholder={{estatura}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorpiel" class="col-lg-10 control-label">Color de Piel</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorpiel"
-                     placeholder="Color de Piel">
+                     placeholder={{piel}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorcabello" class="col-lg-10 control-label">Color de Cabello</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorcabello"
-                     placeholder="Color de Cabello">
+                     placeholder={{cabello}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorojos" class="col-lg-10 control-label">Color de Ojos</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorojos"
-                     placeholder="Color de Ojos">
+                     placeholder={{ojos}}>
             </div>
         </div>
         <div class="form-group">
             <label for="promediovida" class="col-lg-10 control-label">Promedio de Vida</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="promediovida"
-                     placeholder="Promedio de Vida">
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <label for="planetahabita" class="col-lg-10 control-label">Planeta que Habita</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="planetahabita"
-                     placeholder="Planeta que Habita">
+                     placeholder={{pvida}}>
             </div>
         </div>
         <div class="form-group">
             <label for="idiomas" class="col-lg-10 control-label">Idiomas</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="idiomas"
-                     placeholder="Genero">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="personas" class="col-lg-10 control-label">Personas</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="personas"
-                     placeholder="Personas">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="peliculas" class="col-lg-10 control-label">Peliculas</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="peliculas"
-                     placeholder="Peliculas">
+                     placeholder={{idioma}}>
             </div>
         </div>
       </form>
