@@ -2,13 +2,9 @@
     <tr>
         <td  valign="top">
       <div class="form-group" >
-    <label for="selectnaveespacial">Seleccionar Naves Espaciales</label>
-    <select class="form-control" id="selectnaveespacial" >
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <label for="select">Seleccionar Naves Espaciales</label>
+    <select class="form-control" id="selectnaveespacial" [(ngModel)]="nombre" (change)="seleccionaNaveEspacial(nombre)" >
+      <option *ngFor='let mi of naves'>{{mi.name}}</option>
     </select>
 </div>
 </td>
@@ -18,105 +14,91 @@
           <label for="nombre" class="col-lg-10 control-label">Nombre</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="nombre"
-                   placeholder="Nombre">
+                   placeholder={{nombre}}>
           </div>
         </div>
         <div class="form-group">
           <label for="modelo" class="col-lg-10 control-label">Modelo</label>
           <div class="col-lg-13">
             <input type="text" class="form-control" id="modelo"
-                   placeholder="Modelo">
+                   placeholder={{modelo}}>
           </div>
         </div>
         <div class="form-group">
             <label for="fabricante" class="col-lg-10 control-label">Fabricante</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="fabricante"
-                     placeholder="Fabricante">
+                     placeholder={{fabricante}}>
             </div>
         </div>
         <div class="form-group">
             <label for="costo" class="col-lg-10 control-label">Costo</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="costo"
-                     placeholder="Costo">
+                     placeholder={{costo}}>
             </div>
         </div>
         <div class="form-group">
             <label for="longitud" class="col-lg-10 control-label">Longitud</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="longitud"
-                     placeholder="Longitud">
+                     placeholder={{longitud}}>
             </div>
         </div>
         <div class="form-group">
             <label for="velocidadatmosferica" class="col-lg-10 control-label">Velocidad Atmosferica</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="velocidadatmosferica"
-                     placeholder="Velocidad Atmosferica">
+                     placeholder={{velocidad}}>
             </div>
         </div>
         <div class="form-group">
             <label for="tripulacion" class="col-lg-10 control-label">Tripulacion</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="tripulacion"
-                     placeholder="Tripulacion">
+                     placeholder={{tripulacion}}>
             </div>
         </div>
         <div class="form-group">
             <label for="pasajeros" class="col-lg-10 control-label">Pasajeros</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="pasajeros"
-                     placeholder="Pasajeros">
+                     placeholder={{pasajeros}}>
             </div>
         </div>
         <div class="form-group">
             <label for="capacidadcarga" class="col-lg-10 control-label">Capacidad de Carga</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="capacidadcarga"
-                     placeholder="Capacidad de Carga">
+                     placeholder={{carga}}>
             </div>
         </div>
         <div class="form-group">
             <label for="consumibles" class="col-lg-10 control-label">Consumibles</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="consumibles"
-                     placeholder="Consumibles">
+                     placeholder={{consumibles}}>
             </div>
         </div>
         <div class="form-group">
             <label for="calificacionhiperimpulsor" class="col-lg-10 control-label">Calificacion Hiperimpulsor</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="calificacionhiperimpulsor"
-                     placeholder="Calificacion Hiperimpulsor">
+                     placeholder={{rata}}>
             </div>
         </div>
         <div class="form-group">
             <label for="mglt" class="col-lg-10 control-label">MGLT</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="mglt"
-                     placeholder="MGLT">
+                     placeholder={{mglt}}>
             </div>
         </div>
         <div class="form-group">
             <label for="clasevnaveespacial" class="col-lg-10 control-label">Clase Nave Espacial</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="clasenaveespacial"
-                     placeholder="Clase Nave Espacial">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="pilotos" class="col-lg-10 control-label">Pilotos</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="pilotos"
-                     placeholder="Pilotos">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="peliculas" class="col-lg-10 control-label">Peliculas</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="peliculas"
-                     placeholder="Peliculas">
+                     placeholder={{clase}}>
             </div>
         </div>
       </form>
