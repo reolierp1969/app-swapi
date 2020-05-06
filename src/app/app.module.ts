@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { PersonajesComponent} from './personajes/personajes.component';
@@ -21,7 +24,9 @@ import { PlanetasComponent} from './planetas/planetas.component';
     PlanetasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule 
     
   ],
   providers: [],
