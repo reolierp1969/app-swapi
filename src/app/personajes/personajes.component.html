@@ -4,88 +4,84 @@
         <td  valign="top">
       <div class="form-group" >
     <label for="selectpersonaje">Seleccionar Personajes</label>
-    <select class="form-control" id="selectpersonaje" >
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select  class="form-control" id="selectpersonaje" [(ngModel)]="nombre" (change)="seleccionalo(nombre)" >
+       <option *ngFor='let personaje of personajes'> {{ personaje.name }} </option>
+      
     </select>
+    <br>
+    <label for="peliculas1" class="col-lg-10 control-label">Peliculas</label>
+    <textarea rows="3" cols="50" name="comment" placeholder={{pelicula}} id="peliculas1"></textarea>
+    <br>
+    <label for="naves" class="col-lg-10 control-label">Naves</label>
+    <textarea rows="3" cols="50" name="comment" placeholder={{nave}} id="naves"></textarea>
 </div>
 </td>
 <td>
     <form class="form-horizontal" role="form">
         <div class="form-group">
-          <label for="nombre" class="col-lg-10 control-label">Nombre</label>
-          <div class="col-lg-13">
-            <input type="text" class="form-control" id="nombre"
-                   placeholder="Nombre">
+          <label for="nombre" class="col-lg-10 control-label" >Nombre</label>
+          <div class="col-lg-13" >
+            <input type="text" class="form-control" id="nombre" 
+                   placeholder= {{nombre}} >
           </div>
         </div>
         <div class="form-group">
           <label for="estatura" class="col-lg-10 control-label">Estatura</label>
           <div class="col-lg-13">
-            <input type="text" class="form-control" id="estatura"
-                   placeholder="Estatura">
+            <input type="text" class="form-control" id="estatura" placeholder={{estatura}}>
           </div>
         </div>
         <div class="form-group">
             <label for="peso" class="col-lg-10 control-label">Peso</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="peso"
-                     placeholder="Peso">
+                     placeholder={{peso}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorpiel" class="col-lg-10 control-label">Color de Piel</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorpiel"
-                     placeholder="Color de Piel">
+                     placeholder={{color_piel}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorcabello" class="col-lg-10 control-label">Color de Cabello</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorcabello"
-                     placeholder="Color de Cabello">
+                     placeholder={{color_cabello}}>
             </div>
         </div>
         <div class="form-group">
             <label for="colorojos" class="col-lg-10 control-label">Color de Ojos</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="colorojos"
-                     placeholder="Color de Ojos">
+                     placeholder={{color_ojos}}>
             </div>
         </div>
         <div class="form-group">
             <label for="anonacimiento" class="col-lg-10 control-label">Año de nacimiento</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="anonacimiento"
-                     placeholder="Año de Nacimiento">
+                     placeholder={{nacimiento}}>
             </div>
         </div>
         <div class="form-group">
             <label for="genero" class="col-lg-10 control-label">Genero</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="genero"
-                     placeholder="Genero">
+                     placeholder={{sexo}}>
             </div>
         </div>
         <div class="form-group">
             <label for="planetahabita" class="col-lg-10 control-label">Planeta que Habita</label>
             <div class="col-lg-13">
               <input type="text" class="form-control" id="planetahabita"
-                     placeholder="Planeta que Habita">
+                     placeholder={{casa}}>
             </div>
         </div>
         
-        <div class="form-group">
-            <label for="peliculas" class="col-lg-10 control-label">Peliculas</label>
-            <div class="col-lg-13">
-              <input type="text" class="form-control" id="peliculas"
-                     placeholder="Peliculas">
-            </div>
-        </div>
+        
       </form>
     
 </td>
